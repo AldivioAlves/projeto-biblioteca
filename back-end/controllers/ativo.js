@@ -1,10 +1,10 @@
-const Exemplar = require('../models/Exemplar')
+const Ativo = require('../models/Ativo')
 
 const controller ={}
 
 controller.novo = async function(req,res){
     try{
-        await Exemplar.create(req.body)
+        await Ativo.create(req.body)
         res.sendStatus(201).end()
     }catch(erro){
         console.error(erro)
@@ -14,8 +14,8 @@ controller.novo = async function(req,res){
 
 controller.listar = async function(req,res){
     try{
-        const exemplares = await exemplares.find()
-        res.send(exemplares)
+        const ativos = await ativos.find()
+        res.send(ativos)
     }catch(erro){
         console.error(erro)
         res.sendStatus(500).end()
@@ -25,9 +25,9 @@ controller.listar = async function(req,res){
 controller.obterUm = async function(req,res){
     const id= req.params.id
     try{
-        const exemplar = await Exemplar.findById(id)
-        if(exemplar){
-            res.send(exemplar)
+        const ativo = await Ativo.findById(id)
+        if(ativo){
+            res.send(ativo)
         }
 
     }catch(erro){
@@ -39,8 +39,8 @@ controller.obterUm = async function(req,res){
 controller.atualizar = async function (req, res){
     const id = req.body_id
     try{
-        const exemplar = await Exemplar.findById(id)
-        if(exemplar){
+        const ativo = await Ativo.findById(id)
+        if(ativo){
             res.sendStatus(204).end()
         } else{
             res.sendStatus(404).end()
@@ -55,8 +55,8 @@ controller.excluir = async function (req, res){
     const id = req.body._id
 
     try{
-        const exemplar = await Exemplar.findById(id)
-        if(exemplar){
+        const ativo = await Ativo.findById(id)
+        if(ativo){
             res.sendStatus(204).end()
         }else{
             res.sendStatus(404).end()

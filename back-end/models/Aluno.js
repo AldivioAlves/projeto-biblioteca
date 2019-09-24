@@ -1,30 +1,38 @@
 const mongoose = require('mongoose')
 
 const schema = mongoose.Schema({
+    id:{
+        type:Number,
+        require:true
+    },
     nome:{
         type: String,
         required:true
     },
-    curso:{
-        type:String,
+    dataNascimento:{
+        type:Date,
         require:true
+
     },
     cpf:{
-        type:String,
+        type:Number,
         require:true
     },
     telefone:{
         type:String,
-        
+
     },
-    ra:{
-        type:Number,
-        require:true
-    },
-    endereco:{
+    celular:{
         type:String,
         require:true
-    } 
+    },
+    endereço:{
+
+    },
+    nomeDaMae:{
+        type:String
+    }
+ 
 })
 
 module.exports = mongoose.model('Aluno',schema,'alunos')

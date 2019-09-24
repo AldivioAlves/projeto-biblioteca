@@ -1,7 +1,8 @@
 const mongoose = require('mongoose')
 
+
 const schema = mongoose.Schema({
-    idBibliotecaria:{
+    idEditora:{
         type:Number,
         require:true
     },
@@ -9,26 +10,17 @@ const schema = mongoose.Schema({
         type:String,
         require:true
     },
-    dataNascimento:{
-        type:Date,
-        require:true
-    },
-    cpf:{
-        type:String,
-        require:true
-    },
-    celular:{
-        type:String,
-        require:true
-    },
-    telefone:{
-        type:String
-    },
     endereco:{
 
-
     },
+    telefone:{
+        type:String,
+        require:true
+    },
+    pais:{
+        type:String,
+        require:true
+    }
 
 })
-
-module.exports = mongoose.model('Bibliotecaria',schema,'bibliotecarias')
+module.exports = mongoose.model('Editora',schema,'editoras')

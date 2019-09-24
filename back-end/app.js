@@ -33,7 +33,7 @@ app.use('/aluno',aluno)
 const bibliotecaria = require('./routes/bibliotecaria')
 app.use('/bibliotecaria', bibliotecaria)
 
-const exemplar = require('./routes/exemplar')
-app.use('/exemplar',exemplar)
+const ativo = require('./routes/ativo')
+app.use('/ativo',ativo)
 
 module.exports = app;
