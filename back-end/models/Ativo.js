@@ -4,12 +4,12 @@ const schema = mongoose.Schema({
     idAtivo:{
         type:Number,
         require:true
-    },
-    tipo:{
+    }, 
+    Tipo:{
         type:String,
         require:true
     },
-    nome:{
+    Nome:{
         type:String,
         require:true
     },
@@ -18,28 +18,31 @@ const schema = mongoose.Schema({
         require:true
     },
     Editora:{
-        type:String,
-        
+
     },
-    Descrisao:{
+    Descricao:{
         type:String
     },
-    ano:{
+    Ano:{
+        type:Date
+
+    },
+    Edicao:{
         type:Number
     },
-    edicao:{
-        type:String
-    },
-    isbn:{
+    Isbn:{
         type:Number
     },
-    tombo:{
-        type:String,
-        require:true
+    Tombo:{
+
     },
-    corredor:{
+    QtDisponivel:{
         type:Number,
         require:true
+    },
+    Local:{
+        
     }
+
 })
 module.exports = mongoose.model('Ativo',schema,'ativo')

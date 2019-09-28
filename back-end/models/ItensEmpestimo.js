@@ -2,20 +2,21 @@ const mongoose = require('mongoose')
 
 
 const schema = mongoose.Schema({
-    idItensEmprestimos:{
+    IdItem:{
         type:Number,
         require:true
     },
-
-    idtombo:{
-
-    },
-    idAtivo:{
+    Nome:{
 
     },
-    idItem:{
+    idTombo:{
+        
+    }, 
+    QtEmprestimo:{
 
     }
+
+
 
 })
 module.exports = mongoose.model('ItensEmprestimo',schema,'itensEmprestimos')

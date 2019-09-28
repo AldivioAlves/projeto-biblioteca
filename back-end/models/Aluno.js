@@ -1,36 +1,37 @@
 const mongoose = require('mongoose')
 
 const schema = mongoose.Schema({
-    id:{
+    idAluno:{
         type:Number,
         require:true
     },
-    nome:{
+    Nome:{
         type: String,
         required:true
     },
-    dataNascimento:{
+    DtNascimento:{
         type:Date,
         require:true
 
     },
-    cpf:{
+    Cpf:{
         type:Number,
         require:true
     },
-    telefone:{
-        type:String,
-
-    },
-    celular:{
+    Telefone:{
         type:String,
         require:true
-    },
-    endereço:{
 
     },
-    nomeDaMae:{
+    Celular:{
         type:String
+    },
+    Endereço:{
+
+    },
+    NomeMae:{
+        type:String, 
+        require: true
     }
  
 })

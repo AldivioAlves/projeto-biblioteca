@@ -6,20 +6,18 @@ const schema = mongoose.Schema({
         type:Number,
         require:true
     },
-    nome:{
+    Nome:{
         type:String,
         require:true
     },
-    endereco:{
-
-    },
-    telefone:{
+ 
+    Telefone:{
         type:String,
         require:true
     },
-    pais:{
+    Pais:{
         type:String,
-        require:true
+     
     }
 
 })

@@ -6,20 +6,20 @@ const schema = mongoose.Schema({
         type:Number,
         require:true
     },
-    data:{
+    DtEmpre:{
         type:Date,
         require:true
     },
-    idAtivos:{
+    Ativos:{
 
     },
-    idAluno:{
+    Aluno:{
 
     },
-    idBibliotecaria:{
+    Bibliotecario:{
         
     },
-    dataDevolucao:{
+    DataDev:{
         type:Date,
         require:true
     },
