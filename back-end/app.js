@@ -36,4 +36,19 @@ app.use('/bibliotecaria', bibliotecaria)
 const ativo = require('./routes/ativo')
 app.use('/ativo',ativo)
 
+const ativo = require('./routes/editora')
+app.use('/editora',editora)
+
+const ativo = require('./routes/emprestimo')
+app.use('/emprestimo',emprestimo)
+
+const ativo = require('./routes/itensEmprestimo')
+app.use('/itensEmprestimo',itensEmprestimo)
+
+const ativo = require('./routes/local')
+app.use('/local',local)
+
+const ativo = require('./routes/endereco')
+app.use('/endereco',endereco)
+
 module.exports = app;

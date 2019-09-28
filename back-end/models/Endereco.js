@@ -4,43 +4,35 @@ const schema = mongoose.Schema({
     idEndereco:{
         type:Number,
         require:true
-    },
-    idDonoEndereco:{
-
-    },
-
-    logadouro:{
+    }, 
+    TipoLogradouro:{
         type:String,
         require:true
-    },
-    nomeLogadouro:{
+    }, 
+    Logradouro:{
         type:String,
         require:true
-    },
-    numero:{
+    }, 
+    Numero:{
         type:Number,
         require:true
     },
-    bairro:{
+    Bairro:{
         type:String,
         require:true
-    },
-    cidade:{
+    }, 
+    Cidade:{
         type:String,
         require:true
-    },
-    uf:{
+    }, 
+    Uf:{
         type:String,
         require:true
-    },
-    cep:{
+    }, 
+    Cep:{
         type:String,
         require:true
-    },
-    tipo:{
-        type:String
     }
-
 
 })
 module.exports = mongoose.model('Endereco',schema,'enderecos')

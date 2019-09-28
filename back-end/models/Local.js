@@ -6,18 +6,20 @@ const schema = mongoose.Schema({
         type:Number,
         require:true
     },
-    idAtivo:{
-        
-    },
-    corredor:{
+
+    Corredor:{
+        type:Number,
+        require:true
   
     },
-    estante:{
-   
-
+    Estante:{
+        type:Number,
+        require:true
+        
     },
-    prateleira:{
-
+    Prateleira:{
+        type:Number,
+        require:true
     }
     
 })

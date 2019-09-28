@@ -5,26 +5,26 @@ const schema = mongoose.Schema({
         type:Number,
         require:true
     },
-    nome:{
+    Nome:{
         type:String,
         require:true
     },
-    dataNascimento:{
+    DtNascimento:{
         type:Date,
         require:true
     },
-    cpf:{
+    Cpf:{
         type:String,
         require:true
     },
-    celular:{
+    Celular:{
         type:String,
         require:true
     },
-    telefone:{
+    Telefone:{
         type:String
     },
-    endereco:{
+    Endereco:{
 
 
     },
