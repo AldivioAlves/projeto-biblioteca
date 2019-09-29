@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const controller = require('../controllers/bibliotecaria')
+const controller = require('../controllers/funcionario')
 
 router.post('/',controller.novo)
 router.get('/', controller.listar)

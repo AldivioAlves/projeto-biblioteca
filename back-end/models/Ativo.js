@@ -18,6 +18,8 @@ const schema = mongoose.Schema({
         require:true
     },
     Editora:{
+        type: mongoose.ObjectId,
+        ref: 'Editora'
 
     },
     Descricao:{
@@ -34,6 +36,9 @@ const schema = mongoose.Schema({
         type:Number
     },
     Tombo:{
+        type: Number,
+        require:true
+    
 
     },
     QtDisponivel:{
@@ -41,6 +46,8 @@ const schema = mongoose.Schema({
         require:true
     },
     Local:{
+        type: mongoose.ObjectId,
+        ref: 'Local'
         
     }
 

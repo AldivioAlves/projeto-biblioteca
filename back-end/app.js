@@ -10,7 +10,8 @@ var usersRouter = require('./routes/users');
 var app = express();
 
 const database = require('./config/database');
-database('mongodb://localhost:27017/biblioteca');
+const biblioteca = 'mongodb://localhost:27017/biblioteca';
+database(biblioteca);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -30,25 +31,25 @@ app.use('/users', usersRouter);
 const aluno = require('./routes/aluno')
 app.use('/aluno',aluno)
 
-const bibliotecaria = require('./routes/bibliotecaria')
-app.use('/bibliotecaria', bibliotecaria)
+const funcionario = require('./routes/funcionario')
+app.use('/funcionario', funcionario)
 
 const ativo = require('./routes/ativo')
 app.use('/ativo',ativo)
 
-const ativo = require('./routes/editora')
+const editora = require('./routes/editora')
 app.use('/editora',editora)
 
-const ativo = require('./routes/emprestimo')
+const emprestimo = require('./routes/emprestimo')
 app.use('/emprestimo',emprestimo)
 
-const ativo = require('./routes/itensEmprestimo')
+const itensEmprestimo = require('./routes/itensEmprestimo')
 app.use('/itensEmprestimo',itensEmprestimo)
 
-const ativo = require('./routes/local')
+const local = require('./routes/local')
 app.use('/local',local)
 
-const ativo = require('./routes/endereco')
+const endereco = require('./routes/endereco')
 app.use('/endereco',endereco)
 
 module.exports = app;

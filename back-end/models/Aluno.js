@@ -27,7 +27,8 @@ const schema = mongoose.Schema({
         type:String
     },
     Endereço:{
-
+        type: mongoose.ObjectId,
+        ref: 'Endereco'
     },
     NomeMae:{
         type:String, 

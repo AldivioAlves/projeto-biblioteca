@@ -25,10 +25,11 @@ const schema = mongoose.Schema({
         type:String
     },
     Endereco:{
-
+        type: mongoose.ObjectId,
+        ref: 'Endereco'
 
     },
 
 })
 
-module.exports = mongoose.model('Bibliotecaria',schema,'bibliotecarias')
+module.exports = mongoose.model('Funcionario',schema,'funcionarios')

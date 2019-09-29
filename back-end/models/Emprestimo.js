@@ -11,12 +11,19 @@ const schema = mongoose.Schema({
         require:true
     },
     Ativos:{
+        type: mongoose.ObjectId,
+        ref: 'ItensEmprestimo'
 
     },
     Aluno:{
+        type: mongoose.ObjectId,
+        ref: 'Aluno'
+        
 
     },
-    Bibliotecario:{
+    Funcionario:{
+        type: mongoose.ObjectId,
+        ref: 'Funcionario'
         
     },
     DataDev:{

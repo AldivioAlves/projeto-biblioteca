@@ -1,9 +1,9 @@
-const Bibliotecaria= require('../models/Bibliotecaria')
+const Funcionario= require('../models/Funcionario')
 const controller ={}
 
 controller.novo = async function(req,res){
     try{
-        await Bibliotecaria.create(req.body)
+        await Funcionario.create(req.body)
 
         res.sendStatus(201).end()
 
@@ -18,8 +18,8 @@ controller.novo = async function(req,res){
 
 controller.listar = async function(req,res){
     try{
-        const bibliotecarias = await bibliotecarias.find()
-        res.send(bibliotecarias)
+        const funcionarios = await funcionarios.find()
+        res.send(funcionarios)
     }
     catch(erro){
         console.error(erro)
@@ -31,9 +31,9 @@ controller.listar = async function(req,res){
 controller.obterUm = async function(req, res){
     const id = req.params.id
     try{
-        const bibliotecaria = await Bibliotecaria.findById(id)
-        if(bibliotecaria){
-            res.send(bibliotecaria)
+        const funcionario = await Funcionario.findById(id)
+        if(funcionario){
+            res.send(funcionario)
         }
     }
     catch(erro){
@@ -45,8 +45,8 @@ controller.obterUm = async function(req, res){
 controller.atualizar = async function(req,res){
     const id = req.body._id
     try{
-        const bibliotecaria = await SVGPathSegCurvetoCubicSmoothAbs.findByIdAndUpdate(id,req.body)
-        if(bibliotecaria){
+        const funcionario = await SVGPathSegCurvetoCubicSmoothAbs.findByIdAndUpdate(id,req.body)
+        if(funcionario){
             res.sendStatus(204).end()
         }
         else{
@@ -63,8 +63,8 @@ controller.atualizar = async function(req,res){
 controller.excluir = async function (req,res){
     const id = req.body._id
     try{
-        const bibliotecaria = await Bibliotecaria.findByIdAndDelete(id)
-        if(bibliotecaria){
+        const funcionario = await Funcionario.findByIdAndDelete(id)
+        if(funcionario){
             res.sendStatus(204).end()
         }else{
             res.sendStatus(404).end()
