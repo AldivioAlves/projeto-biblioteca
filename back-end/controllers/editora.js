@@ -17,7 +17,7 @@ controller.novo = async function(req,res){
 
 controller.listar = async function(req,res){
     try{
-        const editoras = await editoras.find()
+        const editoras = await Editora.find()
         res.send(editoras)
     }
     catch(erro){

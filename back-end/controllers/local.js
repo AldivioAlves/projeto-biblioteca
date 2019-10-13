@@ -17,7 +17,7 @@ controller.novo = async function(req,res){
 
 controller.listar = async function(req,res){
     try{
-        const locais = await locais.find()
+        const locais = await Local.find()
         res.send(locais)
     }
     catch(erro){

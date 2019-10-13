@@ -14,8 +14,11 @@ controller.novo = async function(req,res){
 
 controller.listar = async function(req,res){
     try{
-        const ativos = await ativos.find()
+        const ativos = await Ativo.find()
+        .populate('editora')
+        .populate('local')
         res.send(ativos)
+        
     }catch(erro){
         console.error(erro)
         res.sendStatus(500).end()
@@ -37,7 +40,7 @@ controller.obterUm = async function(req,res){
 
 }
 controller.atualizar = async function (req, res){
-    const id = req.body_id
+    const id = req.body._id
     try{
         const ativo = await Ativo.findById(id)
         if(ativo){

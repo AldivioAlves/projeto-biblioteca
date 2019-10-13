@@ -18,8 +18,11 @@ controller.novo = async function(req,res){
 
 controller.listar = async function(req,res){
     try{
-        const funcionarios = await funcionarios.find()
+        const funcionarios = await Funcionario.find()
+        .populate('endereco')
+        
         res.send(funcionarios)
+
     }
     catch(erro){
         console.error(erro)

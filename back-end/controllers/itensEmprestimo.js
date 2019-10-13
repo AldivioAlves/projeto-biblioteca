@@ -17,7 +17,10 @@ controller.novo = async function(req,res){
 
 controller.listar = async function(req,res){
     try{
-        const itensEmprestimos = await itensEmprestimos.find()
+        const itensEmprestimos = await ItensEmprestimo.find()
+        .populate('tombo')
+        .populate('emprestimo')
+        
         res.send(itensEmprestimos)
     }
     catch(erro){

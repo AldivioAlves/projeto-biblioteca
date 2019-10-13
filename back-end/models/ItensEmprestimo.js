@@ -1,32 +1,14 @@
 const mongoose = require('mongoose')
 
-
 const schema = mongoose.Schema({
- _id:{
-     type:String
-
- },
-
-    IdItem:{
-        type:Number,
-        require:true
-        
-    },
   
-    idTombo:{
+    tombo:{
         type: mongoose.ObjectId,
         ref: 'Ativo'
-        
     }, 
-    QtEmprestimo:{
-        type:Number,
-        require:true,
-        default:1
-    },
-
-    
-
-
-
+    emprestimo:{
+        type:mongoose.ObjectId,
+        ref:'Emprestimo'
+    }
 })
 module.exports = mongoose.model('ItensEmprestimo',schema,'itensEmprestimos')

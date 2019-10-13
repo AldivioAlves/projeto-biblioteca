@@ -2,20 +2,17 @@ const mongoose = require('mongoose')
 
 
 const schema = mongoose.Schema({
-    idEditora:{
-        type:Number,
-        require:true
-    },
-    Nome:{
+
+    nome:{
         type:String,
         require:true
     },
  
-    Telefone:{
+    telefone:{
         type:String,
         require:true
     },
-    Pais:{
+    pais:{
         type:String,
      
     }

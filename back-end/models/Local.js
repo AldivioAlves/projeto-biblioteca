@@ -2,22 +2,19 @@ const mongoose = require('mongoose')
 
 
 const schema = mongoose.Schema({
-    idLocal:{
-        type:Number,
-        require:true
-    },
 
-    Corredor:{
+
+    corredor:{
         type:Number,
         require:true
   
     },
-    Estante:{
+    estante:{
         type:Number,
         require:true
         
     },
-    Prateleira:{
+    prateleira:{
         type:Number,
         require:true
     }

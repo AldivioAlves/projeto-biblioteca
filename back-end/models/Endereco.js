@@ -1,35 +1,32 @@
 const mongoose = require('mongoose')
 
 const schema = mongoose.Schema({
-    idEndereco:{
-        type:Number,
-        require:true
-    }, 
-    TipoLogradouro:{
+
+    tipoLogradouro:{
         type:String,
         require:true
     }, 
-    Logradouro:{
+    logradouro:{
         type:String,
         require:true
     }, 
-    Numero:{
+    numero:{
         type:Number,
         require:true
     },
-    Bairro:{
+    bairro:{
         type:String,
         require:true
     }, 
-    Cidade:{
+    cidade:{
         type:String,
         require:true
     }, 
-    Uf:{
+    uf:{
         type:String,
         require:true
     }, 
-    Cep:{
+    cep:{
         type:String,
         require:true
     }

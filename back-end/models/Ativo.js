@@ -1,53 +1,45 @@
 const mongoose = require('mongoose')
 
 const schema = mongoose.Schema({
-    idAtivo:{
-        type:Number,
-        require:true
-    }, 
-    Tipo:{
+    tipo:{
         type:String,
         require:true
     },
-    Nome:{
+    nome:{
         type:String,
         require:true
     },
-    Autor:{
+    autor:{
         type:String,
         require:true
     },
-    Editora:{
+    editora:{
         type: mongoose.ObjectId,
         ref: 'Editora'
-
     },
-    Descricao:{
+    descricao:{
         type:String
     },
-    Ano:{
+    ano:{
         type:Date
 
     },
-    Edicao:{
+    edicao:{
         type:Number
     },
-    Isbn:{
+    isbn:{
         type:Number
     },
-    Tombo:{
+    tombo:{
         type: Number,
         require:true
-    
 
     },
-    QtDisponivel:{
-        type:Number,
-        require:true
-    },
-    Local:{
+
+    local:{
         type: mongoose.ObjectId,
-        ref: 'Local'
+        ref: 'Local', 
+        require:true
         
     }
 

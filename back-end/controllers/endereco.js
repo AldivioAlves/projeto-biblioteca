@@ -17,7 +17,7 @@ controller.novo = async function(req,res){
 
 controller.listar = async function(req,res){
     try{
-        const enderecos = await enderecos.find()
+        const enderecos = await Endereco.find()
         res.send(enderecos)
     }
     catch(erro){

@@ -2,31 +2,23 @@ const mongoose = require('mongoose')
 
 
 const schema = mongoose.Schema({
-    idEmprestimo:{
-        type:Number,
-        require:true
-    },
-    DtEmpre:{
+
+    dtEmpre:{
         type:Date,
         require:true
     },
-    Ativos:{
-        type: mongoose.ObjectId,
-        ref: 'ItensEmprestimo'
-
-    },
-    Aluno:{
+    aluno:{
         type: mongoose.ObjectId,
         ref: 'Aluno'
         
 
     },
-    Funcionario:{
+    funcionario:{
         type: mongoose.ObjectId,
         ref: 'Funcionario'
         
     },
-    DataDev:{
+    dataDev:{
         type:Date,
         require:true
     },
