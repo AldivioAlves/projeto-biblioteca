@@ -52,4 +52,7 @@ app.use('/local',local)
 const endereco = require('./routes/endereco')
 app.use('/endereco',endereco)
 
+const usuario = require('./routes/usuario')
+app.use('/usuario',usuario)
+
 module.exports = app;
